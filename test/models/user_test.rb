@@ -14,7 +14,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "user with duplicate emaul should not be valid" do
-    other_users = users(:one)
+    other_user = users(:one)
     user = User.new(email: other_user.email, password_digest:
       'test')
 
